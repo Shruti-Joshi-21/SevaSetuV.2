@@ -1,0 +1,63 @@
+{
+  "name": "FieldReport",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "Associated task ID"
+    },
+    "task_name": {
+      "type": "string"
+    },
+    "submitted_by": {
+      "type": "string",
+      "description": "Email of submitter"
+    },
+    "submitter_name": {
+      "type": "string"
+    },
+    "submission_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "report_data": {
+      "type": "object",
+      "description": "Dynamic form data based on template"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of image URLs"
+    },
+    "location_lat": {
+      "type": "number"
+    },
+    "location_lng": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "submitted",
+        "reviewed",
+        "approved",
+        "revision_needed"
+      ],
+      "default": "submitted"
+    },
+    "reviewer_comments": {
+      "type": "string"
+    },
+    "reviewed_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "task_id",
+    "submitted_by",
+    "submission_date"
+  ]
+}

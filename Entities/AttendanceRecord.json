@@ -1,0 +1,106 @@
+{
+  "name": "AttendanceRecord",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user marking attendance"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Name of the user"
+    },
+    "user_role": {
+      "type": "string",
+      "enum": [
+        "volunteer",
+        "team_lead",
+        "admin",
+        "staff"
+      ],
+      "description": "Role of the user"
+    },
+    "task_id": {
+      "type": "string",
+      "description": "Associated task ID if applicable"
+    },
+    "task_name": {
+      "type": "string",
+      "description": "Name of the associated task"
+    },
+    "check_in_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of check-in"
+    },
+    "check_out_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of check-out"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitude of check-in location"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude of check-in location"
+    },
+    "address": {
+      "type": "string",
+      "description": "Resolved address from coordinates"
+    },
+    "face_image_url": {
+      "type": "string",
+      "description": "URL of captured face image"
+    },
+    "face_match_confidence": {
+      "type": "number",
+      "description": "AI confidence score for face match (0-100)"
+    },
+    "location_accuracy": {
+      "type": "number",
+      "description": "GPS accuracy in meters"
+    },
+    "distance_from_task": {
+      "type": "number",
+      "description": "Distance from task location in meters"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "auto_approved"
+      ],
+      "default": "pending",
+      "description": "Approval status"
+    },
+    "rejection_reason": {
+      "type": "string",
+      "description": "Reason if rejected"
+    },
+    "approved_by": {
+      "type": "string",
+      "description": "Email of approver"
+    },
+    "verification_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of verification issues"
+    },
+    "device_info": {
+      "type": "string",
+      "description": "Device/browser information"
+    }
+  },
+  "required": [
+    "user_email",
+    "user_name",
+    "check_in_time",
+    "status"
+  ]
+}
