@@ -1,0 +1,61 @@
+{
+  "name": "ReportTemplate",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Template name"
+    },
+    "description": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "text",
+              "number",
+              "textarea",
+              "dropdown",
+              "checkbox",
+              "date",
+              "image",
+              "location"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "placeholder": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Array of form field definitions"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "fields"
+  ]
+}
