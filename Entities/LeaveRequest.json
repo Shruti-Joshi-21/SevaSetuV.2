@@ -1,0 +1,73 @@
+{
+  "name": "LeaveRequest",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "user_role": {
+      "type": "string",
+      "enum": [
+        "volunteer",
+        "team_lead",
+        "staff"
+      ]
+    },
+    "leave_type": {
+      "type": "string",
+      "enum": [
+        "sick",
+        "personal",
+        "vacation",
+        "emergency",
+        "other"
+      ],
+      "default": "personal"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "reviewed_by": {
+      "type": "string"
+    },
+    "review_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_comments": {
+      "type": "string"
+    },
+    "days_count": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "user_email",
+    "user_name",
+    "leave_type",
+    "start_date",
+    "end_date",
+    "reason"
+  ]
+}

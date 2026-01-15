@@ -1,0 +1,123 @@
+{
+  "name": "Task",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Task title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed task description"
+    },
+    "project_name": {
+      "type": "string",
+      "description": "Associated project name"
+    },
+    "location_name": {
+      "type": "string",
+      "description": "Location name/address"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Task location latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Task location longitude"
+    },
+    "location_radius": {
+      "type": "number",
+      "default": 100,
+      "description": "Allowed radius in meters for attendance"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Task start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Task end date"
+    },
+    "start_time": {
+      "type": "string",
+      "description": "Daily start time (HH:MM)"
+    },
+    "end_time": {
+      "type": "string",
+      "description": "Daily end time (HH:MM)"
+    },
+    "time_flexibility_minutes": {
+      "type": "number",
+      "default": 15,
+      "description": "Minutes of flexibility for attendance time"
+    },
+    "assigned_volunteers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of assigned volunteer emails"
+    },
+    "team_lead_email": {
+      "type": "string",
+      "description": "Assigned team lead email"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "paused",
+        "completed",
+        "cancelled"
+      ],
+      "default": "draft"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium"
+    },
+    "attendance_strictness": {
+      "type": "string",
+      "enum": [
+        "relaxed",
+        "moderate",
+        "strict"
+      ],
+      "default": "moderate",
+      "description": "How strictly to validate attendance"
+    },
+    "report_template_id": {
+      "type": "string",
+      "description": "ID of the field report template"
+    },
+    "total_hours_logged": {
+      "type": "number",
+      "default": 0
+    },
+    "completion_percentage": {
+      "type": "number",
+      "default": 0
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "title",
+    "start_date",
+    "end_date"
+  ]
+}
