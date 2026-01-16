@@ -148,7 +148,8 @@ It provides:
 
 ## 🖼️ System Overview
 <img width="1005" height="716" alt="image" src="https://github.com/user-attachments/assets/e121c0e4-37e3-4ab6-81fa-d6e6118d4987" />
-![homescreen](https://github.com/user-attachments/assets/7fd93fe3-efa0-43c1-bcd7-2aebb4dfb289)
+<img width="295" height="603" alt="image" src="https://github.com/user-attachments/assets/c6ba5146-7d05-49e0-a096-520aa054db67" />
+
 
 
 
