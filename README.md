@@ -149,9 +149,7 @@ It provides:
 ## 🖼️ System Overview
 <img width="1005" height="716" alt="image" src="https://github.com/user-attachments/assets/e121c0e4-37e3-4ab6-81fa-d6e6118d4987" />
 <img width="295" height="603" alt="image" src="https://github.com/user-attachments/assets/c6ba5146-7d05-49e0-a096-520aa054db67" />
-
-
-
+<img width="1020" height="495" alt="image" src="https://github.com/user-attachments/assets/9cca9a58-a81a-4fa6-97ed-54427d571e5d" />
 
 ---
 
